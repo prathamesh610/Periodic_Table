@@ -1,0 +1,15 @@
+#:import FallOutTransition kivy.uix.screenmanager.FallOutTransition
+<ScreenManagement>:
+    transition: FallOutTransition()
+    LoadingScreen:
+        id:loading_screen
+        name : 'loading_screen'
+    screenOne:
+        id: screen1
+        name: 'screen_one'
+    screenTwo:
+        id: screen2
+        name: 'screen_two'
+    exitPage:
+        id: Exit
+        name : 'exit_page'

@@ -1,0 +1,56 @@
+#:import Factory kivy.factory.Factory
+<CustomPopup@Popup>:
+    id : pop
+    title: "Exit"
+    size_hint: (None,None)
+    size: (300,300)
+    # Label:
+    #     text:"Do you want to reveal the first word?"
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:"Do you want to Exit?"
+        Button:
+            text:"Yes"
+            on_press: app.stop()
+            # background_normal: ''
+            # background_color: 0,0,0,1
+        Button:
+            text:"No"
+            on_press : root.dismiss()
+
+
+<exitPage>:
+    exitPage_lable : exitPage_lable
+#    exitPage_lable2 : exitPage_lable2
+    canvas:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Background.jpg'
+
+
+    Label:
+        id : Final Score
+        text : "Final Score"
+        font_size : '30sp'
+        color: 0,0,0,1
+        pos_hint : {"center_x":.48,'center_y':.66}
+
+    Label:
+        id: exitPage_lable
+        text : " 44"
+        font_size : '30sp'
+        color: 0,0,0,1
+        pos_hint : {"center_x":.54,'center_y':.66}
+
+
+    Button:
+        text : 'Exit'
+        size_hint : .1,.07
+        pos_hint: {'center_x':.5,'center_y':.5}
+        on_press:
+            app.stop()
+#            Factory.CustomPopup().open()
